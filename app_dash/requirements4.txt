@@ -1,0 +1,7 @@
+Flask
+mysql-connector-python
+dash
+dash-ag-grid
+plotly
+pandas
+sqlalchemy

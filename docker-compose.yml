@@ -1,0 +1,50 @@
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DB_NAME: anomaly_detection
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+
+  flask_app:
+    build:
+      context: ./app  
+      dockerfile: Dockerfile  
+    restart: always
+    environment:
+      FLASK_ENV: development  
+      MYSQL_DB_USER: ${MYSQL_DB_USER}          
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  
+      MYSQL_DB_HOST: db  
+      MYSQL_DB_NAME: anomaly_detection   
+    ports:
+      - "5000:5000" 
+    depends_on:
+      - db 
+ 
+  data_sender:
+    build:
+      context: ./data_sender  
+    restart: always
+    environment:
+      MYSQL_DB_USER: ${MYSQL_DB_USER}           
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  
+    depends_on:
+      - flask_app  
+  
+  dash_app:
+    build:
+      context: ./app_dash 
+      dockerfile: Dockerfile  
+    restart: always
+    environment:
+      MYSQL_DB_USER: ${MYSQL_DB_USER}            
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 
+    ports:
+      - "8050:8050"  
+    depends_on:
+      - data_sender

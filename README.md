@@ -111,10 +111,24 @@ cd Aleksejevs_Matvejs_CloudProgramming
 
 Create a .env file in the root of the project to store your sensitive information:
 
+Open the .env file for editing using nano:
+
 ```bash
-echo "MYSQL_ROOT_PASSWORD=pasword" >> .env
-echo "MYSQL_DB_USER=root" >> .env
+nano .env
 ```
+
+Add the following content to the .env file:
+
+```bash
+MYSQL_ROOT_PASSWORD=pasword
+MYSQL_DB_USER=root
+```
+
+Save the file:
+
+- Press CTRL + O to write the changes.
+- Press Enter to confirm the file name.
+- Press CTRL + X to exit the editor.
 
 📝 Note: Ensure the .env file is included in your .gitignore to prevent committing sensitive information
 
@@ -139,7 +153,6 @@ Dash Visualization App: http://localhost:8050
 ### 🔄 Data Flow Steps
 
 ![anomaly_detection_system_architecture (3)](https://github.com/user-attachments/assets/c1f3ce68-7697-4fc3-9408-0a2c5d146309)
-
 
 1. **Data Stream**:
 

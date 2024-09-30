@@ -138,7 +138,8 @@ Dash Visualization App: http://localhost:8050
 
 ### 🔄 Data Flow Steps
 
-#FOTO
+![data_processing_pipeline1](https://github.com/user-attachments/assets/752aaea4-76e3-47e2-9e5c-a1558b91866a)
+
 
 1. **Data Stream**:
 

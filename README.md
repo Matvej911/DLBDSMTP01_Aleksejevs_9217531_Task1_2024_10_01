@@ -138,7 +138,7 @@ Dash Visualization App: http://localhost:8050
 
 ### 🔄 Data Flow Steps
 
-![data_processing_pipeline1](https://github.com/user-attachments/assets/752aaea4-76e3-47e2-9e5c-a1558b91866a)
+![anomaly_detection_system_architecture (2)](https://github.com/user-attachments/assets/9c8ef4d4-7ca1-4749-8793-97f8d4b1a96c)
 
 
 1. **Data Stream**:

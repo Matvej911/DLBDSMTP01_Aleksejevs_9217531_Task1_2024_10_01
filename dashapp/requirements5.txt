@@ -1,7 +1,0 @@
-dash
-dash-ag-grid
-plotly
-pandas
-sqlalchemy
-mysql-connector-python
-

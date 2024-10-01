@@ -66,9 +66,9 @@ Model_2_product/
 │   ├── requirements.txt      # Python dependencies for database management
 │   └── Dockerfile            # Dockerfile for the database setup
 │
-├── model_not_need/           # Archived or unused model and data files
+├── model_not_need/           # Machine learning model and data files
 │   ├── dataset.csv           # Dataset used for model training and testing
-│   └── model.py              # Model script for experimentation (not needed in final build)
+│   └── model.py              # Model building script, not need to execute, best model and scaler is saved in app/ 
 │
 ├── venv/                     # Python virtual environment (not included in the repository)
 │

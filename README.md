@@ -103,8 +103,8 @@ Ensure you have the following tools installed:
 Clone the project repository from GitHub:
 
 ```bash
-git clone https://github.com/Matvej911/Aleksejevs_Matvejs_CloudProgramming.git
-cd Aleksejevs_Matvejs_CloudProgramming
+git clone https://github.com/Matvej911/DLBDSMTP01_Aleksejevs_9217531_Task1_2024_10_01.git
+cd DLBDSMTP01_Aleksejevs_9217531_Task1_2024_10_01
 ```
 
 ### 2. Setup Environment Variables
